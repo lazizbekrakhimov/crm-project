@@ -14,9 +14,8 @@ const Teachers = () => {
     { title: "ID", dataIndex: "key" },
     { title: "Ismi", dataIndex: "firstName" },
     { title: "Familiya", dataIndex: "lastName" },
-    { title: "Email", dataIndex: "email" },
-    { title: "Telefon", dataIndex: "phone" },
     { title: "Yo'nalish", dataIndex: "stackName" },
+    { title: "Email", dataIndex: "email" },
     { title: "Batafsil", dataIndex: "action" },
   ]
 

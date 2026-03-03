@@ -8,6 +8,8 @@ export const QueryPATH = {
     teachersMore: "teachersMore",
     students: "students",
     studentsMore: "studentsMore",
+    rooms: "rooms",
+    roomsMore: "roomsMore",
 }
 
 export default QueryPATH

@@ -21,24 +21,10 @@ const CustomSelect: FC<SelectType> = ({ extraClass, setValue, value, queryKey, U
     }
     const { data = [] } = GetAll(queryKey, [params], cookies.token, URL, params)
     const list = data ? data.map((item: any) => {
-        const data = {
-            value: item.id,
-            label: (URL == "/students" || URL == "/teachers" || URL == "/users") ? `${item.firstName} ${item.lastName}` : item.name
-        }
+        const data = { value: item.id, label: (URL == "/students" || URL == "/teachers" || URL == "/users") ? `${item.firstName} ${item.lastName}` : item.name }
         return data
     }) : []
-    return (
-        <Select
-            disabled={disabled}
-            value={value}
-            onChange={handleChange}
-            className={`${extraClass} w-80! text-black!`}
-            allowClear
-            size="large"
-            showSearch={{ optionFilterProp: 'label' }}
-            placeholder={placeholder}
-            options={list} />
-    )
+    return <Select disabled={disabled} value={value} onChange={handleChange} className={`${extraClass} w-80! text-gray-800!`} allowClear size="large" showSearch={{ optionFilterProp: 'label' }} placeholder={placeholder} options={list} />
 }
 
 export default CustomSelect

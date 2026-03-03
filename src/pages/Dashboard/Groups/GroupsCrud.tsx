@@ -48,6 +48,7 @@ const GroupsCrud = () => {
       setStatus(moreInfo.status)
     }
   }, [moreInfo])
+  
   return (
     <form onSubmit={handleSubmit} className="p-10 px-10!">
       <div className="flex items-center justify-between">
@@ -81,19 +82,7 @@ const GroupsCrud = () => {
           </label>
           <label className="flex flex-col w-full! gap-1">
             <span className="text-amber-500! pl-1">Holatni tanlang:</span>
-            <Select
-              value={status}
-              onChange={(e) => setStatus(e)}
-              className={`w-full! text-black!`}
-              allowClear
-              size="large"
-              showSearch={{ optionFilterProp: 'label' }}
-              placeholder={"Status tanlang"}
-              options={[
-                { label: "active", value: "active" },
-                { label: "planned", value: "planned" },
-                { label: "archived", value: "archived" },
-              ]} />
+            <Select value={status} onChange={(e) => setStatus(e)} className={`w-full! text-black!`} allowClear size="large" showSearch={{ optionFilterProp: 'label' }} placeholder={"Status tanlang"} options={[ { label: "active", value: "active" }, { label: "planned", value: "planned" }, { label: "archived", value: "archived" }, ]} />
           </label>
         </div>
       </div>

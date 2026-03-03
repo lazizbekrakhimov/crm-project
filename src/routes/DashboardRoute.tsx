@@ -1,15 +1,11 @@
 import { Route, Routes } from "react-router-dom"
 import { PATH } from "../components"
-import { DashboardHome, Groups, GroupsCrud, GroupsMore, NotFound, Rooms, Stacks, StacksCrud, StacksMore, Students, Teachers, Users } from "../pages"
+import { DashboardHome, Groups, GroupsCrud, GroupsMore, NotFound, Rooms, RoomsCrud, Stacks, StacksCrud, StacksMore, Students, StudentsCrud, StudentsMore, Teachers, TeachersCrud, TeachersMore, Users } from "../pages"
 import { Header, Sitebar } from "../modules"
 import { useContext, useEffect, useState } from "react"
 import { Context } from "../context/Context"
 import { GetMe } from "../service"
 import { useCookies } from "react-cookie"
-import TeachersCrud from "../pages/Dashboard/Teachers/TeachersCrud"
-import TeachersMore from "../pages/Dashboard/Teachers/TeachersMore"
-import StudentsMore from "../pages/Dashboard/Students/StudentsMore"
-import StudentsCrud from "../pages/Dashboard/Students/StudentsCrud"
 
 const DashboardRoute = () => {
     const [cookies] = useCookies(['token'])
@@ -43,7 +39,9 @@ const DashboardRoute = () => {
         { id: 25, path: PATH.groupsMoreByStudentsMore, element: <StudentsMore /> },
         { id: 26, path: PATH.groupsMoreByStudentsUpdate, element: <StudentsCrud /> },
         { id: 27, path: PATH.rooms, element: <Rooms /> },
-        { id: 28, path: PATH.notFound, element: <NotFound /> },
+        { id: 28, path: PATH.roomsCreate, element: <RoomsCrud /> },
+        { id: 29, path: PATH.roomsUpdate, element: <RoomsCrud /> },
+        { id: 30, path: PATH.notFound, element: <NotFound /> }
     ])
 
     useEffect(() => {
@@ -57,12 +55,14 @@ const DashboardRoute = () => {
     }, [userInfo])
 
     return (
-        <div className="flex bg-amber-300">
+        <div className="flex bg-white">
             <Sitebar />
-            <div className={`${collapse ? "w-full" : "w-[95%]"} duration-300 h-screen rounded-tl-lg overflow-y-auto`}>
+            <div className={`${collapse ? "w-full" : "w-[95%]"} duration-300 h-screen overflow-y-auto`}>
                 <Header />
-                <div className="h-screen rounded-tl-2xl border-t-transparent border-l-transparent bg-white">
-                    <Routes> {routeList.map((item) => (<Route key={item.id} path={item.path} element={item.element} />))} </Routes>
+                <div className="bg-amber-300">
+                    <div className="h-screen bg-white rounded-tl-2xl border-t-transparent border-l-transparent">
+                        <Routes> {routeList.map((item) => (<Route key={item.id} path={item.path} element={item.element} />))} </Routes>
+                    </div>
                 </div>
             </div>
         </div>

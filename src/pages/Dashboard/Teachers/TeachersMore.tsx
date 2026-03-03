@@ -54,7 +54,7 @@ const TeachersMore = () => {
       </div>
 
       <div className="flex justify-center gap-5 mt-5 mx-10">
-        <div className="w-[50%] shadow-lg rounded-2xl space-y-3 p-5 border border-slate-500">
+        <div className="w-[50%] shadow-lg rounded-2xl space-y-3 p-5 border border-slate-100">
           <div className="text-[18px] font-bold">
             <span className="text-amber-500!">#ID: </span>
             <strong>{id}</strong>
@@ -72,7 +72,7 @@ const TeachersMore = () => {
             <strong>{moreInfo?.stack?.name}</strong>
           </div>
         </div>
-        <div className="w-[50%] shadow-lg rounded-2xl space-y-4 p-5 border border-slate-500 ml-10">
+        <div className="w-[50%] shadow-lg rounded-2xl space-y-4 p-5 border border-slate-100 ml-10">
           <div className="text-[18px] font-bold">
             <span className="text-amber-500!">Email: </span>
             <strong>{moreInfo.email}</strong>

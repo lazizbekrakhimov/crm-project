@@ -20,7 +20,7 @@ const Header = () => {
   function handleLogOut() {
     setLoading(true)
     setTimeout(() => {
-      toast.success("Chiqib ketdingiz")
+      toast.success("Chiqib ketdingiz!")
       setOpenModal(false)
     }, 1000)
     setTimeout(() => {
@@ -30,9 +30,9 @@ const Header = () => {
   }
 
   const LogOutContent = (
-    <div className="flex flex-col justify-center gap-2">
-      <h1 className="font-mono!">{userInfo?.fullName}</h1>
-      <Button onClick={() => setOpenModal(true)} type="primary" icon={<LogoutOutlined />} className="bg-red-500! text-white! hover:bg-red-400! transition-all duration-300 rounded-md flex items-center gap-2 shadow-sm">Chiqish</Button>
+    <div className="flex flex-col items-center! justify-center gap-2! w-40! h-20! px-4">
+      <h1 className="font-mono! text-[18px]!">{userInfo?.fullName}</h1>
+      <Button onClick={() => setOpenModal(true)} type="primary" icon={<LogoutOutlined />} className="bg-red-500! text-white! text-[16px]! p-4! hover:bg-red-400! transition-all duration-300 rounded-md flex items-center shadow-sm">Chiqish</Button>
     </div>
   )
 

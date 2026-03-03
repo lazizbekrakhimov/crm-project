@@ -14,16 +14,14 @@ const Students: FC = () => {
     { title: "ID", dataIndex: "key" },
     { title: "Ismi", dataIndex: "firstName" },
     { title: "Familiya", dataIndex: "lastName" },
-    { title: "Email", dataIndex: "email" },
-    { title: "Telefon", dataIndex: "phone" },
     { title: "Guruh", dataIndex: "groupName" },
     { title: "Yo'nalish", dataIndex: "stackName" },
     { title: "Batafsil", dataIndex: "action" },
   ]
 
   function returnFn(value: any) {
-    value.groupName = value?.group?.name ?? "_"
-    value.stackName = value?.stack?.name ?? "_"
+    value.groupName = value?.groups?.[0]?.name ?? "_"
+    value.stackName = value?.stacks?.[0]?.name ?? "_"
   }
 
   const [search, setSearch] = useState<string>("")

@@ -43,6 +43,7 @@ input::placeholder {
 }
 
 .ant-input,
+.ant-input-number,
 .ant-input-affix-wrapper,
 .ant-input-status-error,
 .ant-input-status-warning {
@@ -51,6 +52,7 @@ input::placeholder {
 
 .ant-input-affix-wrapper:hover,
 .ant-pagination-item,
+.ant-input-number:hover,
 .ant-select-outlined:hover,
 .ant-picker-outlined:hover {
     border-color: #ffba24 !important;
@@ -74,6 +76,7 @@ input::placeholder {
 }
 
 .ant-input-affix-wrapper-focused,
+.ant-input-number-focused,
 .ant-select-focused,
 .ant-picker-focused {
     border-color: #ffba24 !important;
